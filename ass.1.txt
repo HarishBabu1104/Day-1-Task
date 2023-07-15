@@ -1,0 +1,58 @@
+1. 
+
+HTTP1.1:
+
+>Hyper text transfer protocol.
+>It is introduced in 1997.
+>Internet landscape was constantly changing with websites becoming more dynamic and heavy.
+>Features like CORS,keep alive,support was introduced in this update.
+
+Flaws:
+>HOL -Head of line blocking.
+>Repeatition of Header data.
+>more focus on compression,caching,minifying CSS/JS,gzip,etc.
+
+Working:
+>If we request for an index.html and waits till it recieves the response.
+>Then it will request for JS,recieve response back.
+>Then it will request for CSS,return with an response.
+
+HTTP2.0:
+
+>Introduced in 2015.
+>HTTP2 is an HTTP1.1 connection with some additional features.
+>One second TCP connection is setup in which HTTP request are transferred in form of streams.
+>Single TCP connection pipline is used in which streams are created.
+>It is kind of multiplexing of streams into one TCP.
+>HPACK - Header data is sepreate from request data and can be zipped.
+>HPACK - also enables reuse of header data whic is repeated in every request.
+>HPACK reduces HTTP request size.
+>Push frame - can be used at server side and it requires JS/CSS.
+>Push frames enables us to send mandatory resources in advance along with an HTTP response.
+>Push frames should be used with case as this can lead to increase in size of the HTTP response.
+>Almost all tye modern web servers support this.
+
+Overall:
+Even though if the client dont support with HTTP2,the client will be served through HTTP1.1.
+
+2. 
+Objects and its internal representation in Javascript.
+In javascript,an object is a standalone or group of entity,with properties and type.
+
+creating objects in javascript:
+1.Byobject literal.
+2.By creating instance of object directly.
+
+By object literal:
+>The syntax of creating object directly using object literal is given below.
+
+object = {property 1 :value 1,property 2 :value 2,....property N :value N}
+
+property and value is separated by colon(:)
+
+Example:
+           var person ={
+           fname : "xxx",
+           lname : "yyy",
+           age   : 25,
+};
