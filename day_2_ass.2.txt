@@ -1,0 +1,93 @@
+Day 2-Assesment
+
+Blog on Document object and Window object:
+
+Document object:
+
+The document object represent a webpage that is loaded in the browser. By accessing the document object,we can access the element in the HTML page.
+With the help of the document objects,we can add dynamic content to our web page.
+The document object can be accessed with a window.document or syntax.document.
+
+Syntax:
+      
+     document.property_name;
+
+ImplementationExample:
+<!DOCTYPE html>
+<html>
+<head>
+<title>document's properties</title>
+<style>
+h1{
+    color : green;
+  }
+</style>
+</head>
+<body>
+<h1>GUVI</h1>
+<button on click = "myFunction()">CLICK ME</button>
+<p id ="demo"></p>
+<script>
+     function myFunction(){
+              var title = document.title;
+              var domain = document.domain;
+              var body = document.body;
+              document.getElementByid("demo").innerHTML = "the title of the document is:"
+              +title
+              +"<br>"
+              +"domain:"
+              +domain
+              +"<br>"
+              +"body:"
+              +body;
+}
+</script>
+</body>
+</html>
+
+
+
+Window object:
+
+The window object is the topmost object of the DOM hierarchy.
+It represnts a browser window or frame that display the contents of the webpage.
+whenever a window appears on the screen to display the contents of the document,the window object is created.
+
+Syntax:
+    window.property_name;
+
+Implementation Example:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Windows properties</title>
+<style>
+h1{
+color : green;
+}
+</style>
+</head>
+<body>
+<h1>GUVI</h1>
+<butto on click ="show()">check</button>
+<p id = "prop"></p>
+<script>
+ function show(){
+ var h = window.innerHeight;
+ var w = window.innerWidth;
+ var l = window.location;
+ var c = window.closed;
+ document.getElementById("prop").innerHTML=
+ "Frame's Height:"
+ +h+"<br>"
+ "Frame's Width:"
+ +w+"<br>:"
+ +"window location:"
+ +l
+ +"<br>"
+ +"window closed:"
+ +c;
+}
+</script>
+</body>
+</html>
